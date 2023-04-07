@@ -1,0 +1,139 @@
+*{
+    margin: 0 auto;
+}
+body{
+    background-color: #e2e2e2;
+}
+.tudo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.linha{
+    clear: both;
+}
+
+#divCabecalho{
+    background-color: #162e58;
+    min-height: 100px;
+    padding: 20px;
+}
+
+#h1TituloCabecalho{
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+}
+#divClassificacao{
+    background-color: #fff;
+    width: 50%;
+    padding: 15px;
+    margin-top: 8px;
+}
+.h2TituloSessao{
+    font-size: 20px;
+    margin: 10px 10px 10px 10px;
+}
+table, td, th{
+    border-bottom: solid 1px #e2e2e2;
+    border-collapse: collapse;
+    padding: 4px;
+    text-align: center;
+}
+.tableJogos{
+    width: 100%;
+}
+th{
+    text-align: center;
+    color: darkgray;
+    font-size: 12px;
+    font-weight: normal;
+}
+.thInicio{
+    width: 50%;
+    text-align: left;
+}
+.thUltimasCinco{
+    width: 20%;
+}
+#tdClube{
+    text-align: left;
+}
+.imgClubes{
+    max-width: 15px;
+}
+.divVit{
+    background-image: url("../img/v.svg");
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin-right: 6px;
+}
+.divEmp{
+    background-image: url("../img/e.svg");
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin-right: 6px;
+}
+.divDer{
+    background-image: url("../img/d.svg");
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin-right: 6px;
+}
+#divGoleadores{
+    background-color: #fff;
+    width: 50%;
+    padding: 15px;
+}
+#tableGoleadores{
+    width: 100%;
+}
+.spanNomeClube{
+    color: darkgray;
+    font-size: 12px;
+}
+.tdJogador{
+    text-align: left;
+    width: 80%;
+}
+#divJogos{
+    background-color: #fff;
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 100px;
+
+}
+#tableJogos{
+    width: 100%;
+}
+#Oitavas{
+    text-align: left;
+    padding: 10px;
+}
+.tableJogo{
+    width: 100%;
+    text-align: left;
+}
+.tdDataJogo{
+    font-size: 12px;
+    text-align: center;
+}
+.tdJogos{
+    text-align: left;
+    padding: 5px;
+    width: 70%;
+}
+.thJogos{
+    text-align: left;
+}
+.spanClubeDer{
+    color: darkgray;
+}
+p{
+    color: darkgray;
+}

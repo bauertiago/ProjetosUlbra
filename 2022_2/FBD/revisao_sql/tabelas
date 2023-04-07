@@ -1,0 +1,47 @@
+categorias
+id      nome
+101     acessorios
+102     eletro
+103     estofados
+
+produtos
+id      nome        preco   id_categoria    data_cad
+201     mochila     190,90  101             2022-10-01
+202     caneta      13,90   101             2022-10-20
+203     celular A10 1002,90 102             2022-11-05
+204     tv1000      1990,90 102             2022-09-02
+
+
+vendas
+id      data        id_cliente
+1001    2022-05-10  102
+1002    2022-07-15  103
+1003    2022-10-17  104
+1004    2022-10-31  104
+
+vendas_itens
+id      id_venda    id_produto  quantidade  valor_unit
+90      1001        201             1           188,00
+91      1002        202             5           10,00
+93      1003        204             1           1000,00
+
+
+salas
+num
+316
+317
+326
+327
+
+alunos
+id      sala        nome
+1       316         a
+2       316         b
+3       316         c 
+4       317         d
+5       317         e 
+6       326         f
+7       326         g
+8       326         h
+9       326         i 
+10      327         j

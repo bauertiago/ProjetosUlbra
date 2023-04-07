@@ -1,0 +1,60 @@
+body {    
+    background-color: lightgray;
+    font-family: Arial;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    background-color: darkolivegreen;
+}
+h3 {
+    text-align: left;
+}
+h4 {
+    text-align: left;
+}
+
+
+#imgFoto {
+    max-width: 120px; 
+    max-height: 120px;
+    border-radius: 50%;
+    border: 4px solid darkolivegreen;  
+}
+
+#imgWhats {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+#imgLinkedin {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+p {
+    text-align: left;
+}
+
+/*elementos estruturais*/
+.tudo{
+    text-align: center;
+    border: solid black;
+    border-radius: 3%;
+    width: 60%;   
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+.esquerda{
+    width: 50%;
+    float: left;
+}
+.direita{
+    width: 50%;
+    float: left;
+}
+
+.linha{
+    clear: both;
+}

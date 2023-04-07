@@ -1,0 +1,22 @@
+
+header{
+    background-color: rgba(0, 0, 0, 0.842);
+}
+nav{
+    background-color: rgb(6, 4, 56);
+    color: #e7e7e7;
+}
+nav a:link, nav a:visited, nav a:hover, nav a:active{
+    text-decoration: none;
+    color: #e7e7e7;
+}
+section{
+    background-color: #f7f7f7;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.842);
+}
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: #bebebe;
+}

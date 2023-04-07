@@ -1,0 +1,149 @@
+.tudo{
+    width: 60%;
+    border: solid 1px black;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgb(243, 252, 196);
+}
+
+.linha{
+    clear: both;
+}
+body{
+    font-family: arial;
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(60, 204, 248);
+    margin-top: 0px;
+    padding: 5px;
+    border-radius: 15px;
+    border-style:solid;
+}
+
+p{
+    margin-top: auto;
+}
+
+img{
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+#foto{
+    width: 20%;
+    float: left;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#dados{
+    width: 70%;
+    float: left;
+    padding-top: 20px;
+    line-height: 23px;
+    padding-left: 50px;
+}
+
+#imgWhats {
+    max-width: 15px;
+}
+
+#imgLinkedin {
+    max-width: 15px;
+    padding-bottom: 10
+}
+
+.fonteDados{
+    color: rgb(60, 204, 248);
+    font-weight: bold;
+}
+
+h2{
+    color: rgb(60, 204, 248);
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+
+hr{
+   height: 3px;
+   background-color: rgb(60, 204, 248);
+   border-radius: 50px;
+   border-color: black;
+}
+
+h4{
+    margin-bottom: 0px;
+    margin-top: 8px;
+}
+
+#coluna1{
+    float:left ;
+    width: 46%;
+    padding-right: 20px;
+}
+
+#colunaCentro{
+    float: left;
+    width: 3px;
+    height: 450px;
+    border-radius: 50px;
+    background-color: rgb(60, 204, 248);
+    border-radius: 50px;
+    margin-top: 40px;
+    border-style:solid;
+}
+
+#coluna2{
+    float: left;
+    width: 47%;
+    margin-left: 20px;
+    margin-right: 2px;
+}
+
+h3{
+    color: rgb(60, 204, 248);
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+
+h5{
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+.tituloHabilidade{
+    float: left;
+    margin-bottom: 6px;
+}
+
+.circulo{
+    width: 12px;
+    height: 12px;
+    background-color: rgb(60, 204, 248);
+    float: right;
+    border-radius: 50px;
+    margin-left: 8px;
+    
+}
+
+.circulo1{
+    width: 12px;
+    height: 12px;
+    background-color: rgb(201, 236, 247);
+    float: right;
+    border-radius: 50%;
+    margin-left: 08px;
+}
+
+.tituloPersonalidade{
+    float: left;
+    margin-bottom: 6px;
+}
+
+.tituloIdioma{
+    float: left;
+    margin-bottom: 6px;
+}

@@ -1,0 +1,17 @@
+.body{
+    background-color: rgb(1, 59, 59);
+    
+}
+.fundo{
+    background-color: #000;
+}
+.texto{
+    color: #000;
+}
+a:hover {
+    background-color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+select:hover{
+    background-color: #000;
+}

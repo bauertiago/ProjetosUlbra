@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.menu {
+    background-color: cadetblue;
+    
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.banner {
+    background-image: url(/assets/img/banner.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.541176);
+    font-size: 28px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    
+}
+
+a {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+#link{
+    color: #fff;
+}
