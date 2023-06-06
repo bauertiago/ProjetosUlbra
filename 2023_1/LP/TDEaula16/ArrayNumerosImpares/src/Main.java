@@ -13,5 +13,14 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             System.out.println(numerosImpares[i]);
         }
+
+        System.out.println("========Outra Forma========");
+        int[] numeros = new int[10];
+        for (int x = 0; x < numeros.length; x++) {
+            numeros[x] = x * 2 + 1;
+        }
+        for (int x = 0; x < numeros.length; x++) {
+            System.out.println(numeros[x]);
+        }
     }
 }

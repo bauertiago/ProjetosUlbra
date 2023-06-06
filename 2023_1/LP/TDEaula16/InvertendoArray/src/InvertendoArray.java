@@ -1,9 +1,14 @@
 public class InvertendoArray {
     public static void main(String[] args) {
-        int [] numeros = {1, 2, 3, 4, 5};
+        String [] cores = {"Vermelho ", "Azul ", "Verde ", "Amarelo ", "Roxo "};
+        for (int x = 0; x < cores.length; x++){
+            System.out.println(cores[x]);
+        }
 
-        for (int i  = numeros.length - 1; i >=0; i--){
-            System.out.println(numeros[i]);
+        System.out.println("====================");
+
+        for (int x  = cores.length - 1; x >=0; x--){
+            System.out.println(cores[x]);
         }
     }
 }

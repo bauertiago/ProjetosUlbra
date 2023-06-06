@@ -1,10 +1,9 @@
 public class NumeroMaior {
     public static void main(String[] args) {
         int[] valores = {10, 1, 5, 100, 55};
-        int i= 0;
-        int maior = valores[i];
+        int maior = valores[0];
 
-        for (i = 0; i < valores.length; i++) {
+        for (int i = 0; i < valores.length; i++) {
             if (valores[i] > maior) {
                 maior = valores[i];
             }
