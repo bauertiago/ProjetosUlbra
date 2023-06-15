@@ -1,0 +1,60 @@
+db.detentos.insertOne({"nome": "João","bloco": "1A","cela": "10"});
+db.detentos.insertMany([{"nome": "Paulo", "bloco": "1C","cela": 30},{"nome": "Pedro","bloco": "1B", "cela": 20}]);
+
+db.detentos.find()
+[
+  {
+    "_id": "ObjectId('648b4abe189bd0bf1294ce10')",
+    "nome": "João",
+    "bloco": "1A",
+    "cela": 10
+  },
+  {
+    "_id": "ObjectId('648b4df04407b0de205a7439')",
+    "nome": "Paulo",
+    "bloco": "1C",
+    "cela": 30
+  },
+  {
+    "_id": "ObjectId('648b4df04407b0de205a743a')",
+    "nome": "Pedro",
+    "bloco": "1B",
+    "cela": 20
+  }
+]
+
+db.visitantes.insertMany([{"nome": "Mario","relacionamento": "Pai"},{"nome": "Maria","relacionamento": "Esposa"}]);
+db.visitantes.find();
+[
+    {
+      "_id": "ObjectId('648b52f54407b0de205a743b')",
+      "nome": "Mario",
+      "relacionamento": "Pai"
+    },
+    {
+      "_id": "ObjectId('648b52f54407b0de205a743c')",
+      "nome": "Maria",
+      "relacionamento": "Esposa"
+    }
+]
+
+db.visitas.insertMany([{"detento": "Paulo","visitante": "Mario","dataVisita": "2023-06-11","horaEntrada": "10:00","horaSaida": "11:00"},{"detento": "João","visitante": "Maria","dataVisita": "2023-06-12","horaEntrada": "11:00","horaSaida": "12:00"}]);
+db.visitas.find();
+[
+  {
+    "_id": "ObjectId('648b58754407b0de205a743d')",
+    "detento": "Paulo",
+    "visitante": "Mario",
+    "dataVisita": "2023-06-11",
+    "horaEntrada": "10:00",
+    "horaSaida": "11:00"
+  },
+  {
+    "_id": "ObjectId('648b58754407b0de205a743e')",
+    "detento": "João",
+    "visitante": "Maria",
+    "dataVisita": "2023-06-12",
+    "horaEntrada": "11:00",
+    "horaSaida": "12:00"
+  }
+]
