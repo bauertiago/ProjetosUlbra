@@ -1,0 +1,67 @@
+// 1- Crie um novo banco de dados chamado "SchoolDB" e, 
+// dentro dele, uma coleção chamada "Students". 
+// Inclua os seguintes campos nos documentos desta coleção: "firstName", 
+// "lastName", "age" e "grade". Insira pelo menos três documentos com dados fictícios.
+
+// Comondos via terminal MongoDB Compass
+
+use SchoolDB
+
+db.Students.insertOne({"firstName":"Tiago","lastName":"Bauer","age":35,"grade":9.5});
+db.Students.insertOne({"firstName":"Rosana","lastName":"Oliveira","age":36,"grade":10});
+db.Students.insertOne({"firstName":"Laura","lastName":"Souza","age":4,"grade":10});
+[
+    {
+        "_id":"ObjectId('648a77bb0509e4552cc838c2')",
+        "firstName": "Tiago",
+        "lastName": "Bauer",
+        "age": 35,
+        "grade": 9.5
+    },
+    {
+        "_id": "ObjectId('648a7f9b0509e4552cc838c3')",
+        "firstName": "Rosana",
+        "lastName": "Oliveira",
+        "age": 36,
+        "grade": 10
+    },
+    {
+        "_id":"ObjectId('648a80ec0509e4552cc838c4')",
+        "firstName": "Laura",
+        "lastName": "Souza",
+        "age": 4,
+        "grade": 10
+    }
+]
+
+// 2- Crie uma consulta para exibir todos os estudantes que têm mais de 15 anos na coleção "Students".
+db.Students.find({age: { $gt: 15 } });
+
+
+// 3- Atualize a idade de um dos estudantes que você criou no exercício 1. 
+// Confirme se a alteração foi feita com sucesso realizando uma nova consulta.
+db.Students.updateOne({"firstName":"Laura","lastName":"Souza"},{$set: {"age": 5}});
+db.Students.find(); 
+ou db.Students.find({ “firstName”: “Laura”,“lastName”:“Souza” });
+
+// 4- Exclua um dos documentos da coleção "Students". Novamente, confirme se a operação foi bem sucedida através de uma nova consulta.
+db.Students.deleteOne({"firstName":"Laura","lastName":"Souza"});
+db.Students.find();
+
+// 5- Crie uma nova coleção chamada "Courses". Cada documento dessa coleção deve ter os campos "courseName" e "teacherName". 
+// Além disso, crie um array "students" para representar os estudantes matriculados no curso. Cada item desse array deve ser um objeto com os campos "firstName" e "lastName". 
+// Adicione pelo menos um documento a esta coleção e inclua alguns estudantes no array.
+
+db.Courses.insertOne({"courseName":"Banco de Dados", "teacherName":"Cássio","Students":[{"firstName":"Carol","lastName":"Bauer"},{"firstName":"Vanessa","lastName":"Cardoso"}]});
+
+[
+    {
+      "_id": "ObjectId('648a8dc00509e4552cc838c5')",
+      "courseName": "Banco de Dados",
+      "teacherName": "Cássio",
+      "Students": [
+        { "firstName": "Carol", "lastName": "Bauer" },
+        { "firstName": "Vanessa", "lastName": "Cardoso" }
+      ]
+    }
+  ]
