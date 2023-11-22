@@ -1,22 +1,23 @@
 import mysql.connector
 
+
 db_config = {
-    "host": "db4free.net",
-    "user": "natanhmc",
-    "password": "1q2w3e4r5t",
-    "database": "linkedin123",
-    "port":3306
-}    
+    'user':'natanhmc',
+    'password':'1q2w3e4r5t',
+    'host':'db4free.net',
+    'database':'linkedin123',
+    'port':3306
+}
+
 
 # Função para criar o banco de dados
 def criar_banco():
-    
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
-   
+
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS contatos (
-            id INT auto_increment PRIMARY KEY,
+            id INT PRIMARY KEY AUTO_INCREMENT,
             nome VARCHAR(50),
             perfil_linkedin VARCHAR(50)
         );
@@ -24,7 +25,7 @@ def criar_banco():
 
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS conexoes (
-            id INT AUTO_INCREMENT PRIMARY KEY,
+            id INT PRIMARY KEY AUTO_INCREMENT,
             contato1_id INT,
             contato2_id INT,
             FOREIGN KEY (contato1_id) REFERENCES contatos(id),
@@ -40,13 +41,8 @@ def adicionar_contato(nome, perfil_linkedin):
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
 
-    try:
-        cursor.execute('INSERT INTO contatos (nome, perfil_linkedin) VALUES (%s, %s)', (nome, perfil_linkedin))
-        conn.commit()
-        print("Contato adicionado com sucesso.")
-    except mysql.connector.Error as erro:
-        conn.rollback()
-        print("Perfil já existente. Digite novamente")
+    cursor.execute('INSERT INTO contatos (nome, perfil_linkedin) VALUES (%s, %s)', (nome, perfil_linkedin))
+    conn.commit()
     conn.close()
 
 # Função para listar contatos
@@ -59,7 +55,6 @@ def listar_contatos():
 
     conn.close()
     return contatos
-
 
 # Função para adicionar uma conexão
 def adicionar_conexao(contato1_id, contato2_id):
@@ -74,6 +69,7 @@ def adicionar_conexao(contato1_id, contato2_id):
 
         if cursor.fetchone() is None:
             cursor.execute('INSERT INTO conexoes (contato1_id, contato2_id) VALUES (%s, %s)', (contato1_id, contato2_id))
+            print("Conexão criada com sucesso")
         else:
             print("A conexão entre esses contatos já existe.")
         
@@ -81,9 +77,12 @@ def adicionar_conexao(contato1_id, contato2_id):
         
     except mysql.connector.Error as erro:
         conn.rollback()
-        print(f"Ocorreu um erro{erro} de concorrência. Tente novamente.")
+        print(f"Ocorreu um erro {erro}. Tente novamente.")
         
     conn.close()
+
+#Função para alterar contato
+
 
 # Função para listar conexões de um contato
 def listar_conexoes(contato_id):
@@ -104,29 +103,24 @@ def listar_conexoes(contato_id):
     conn.close()
     return conexoes
 
-#Função para excluir uma conexão
-def excluir_conexao(contato_id1,contato_id2):
+def excluir_contato(id):
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
-    cursor.execute('DELETE FROM conexoes WHERE contato1_id = %s AND contato2_id = %s OR contato1_id = %s AND contato2_id = %s', (contato_id1, contato_id2, contato_id2,contato_id1))
+    cursor.execute('DELETE FROM conexoes WHERE contato1_id = %s OR contato2_id = %s', (id, id))
+    cursor.execute('DELETE FROM contatos WHERE id = %s', (id))
 
     conn.commit()
     conn.close()
 
-# Função para excluir contato
-def excluir_contato(contato_id):
+
+
+def excluir_conexao(id1, id2):
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
+    cursor.execute('DELETE FROM conexoes WHERE (contato1_id = %s AND contato2_id = %s) OR (contato1_id = %s AND contato2_id = %s)', (id1, id2, id2, id1))
 
-    try:
-        cursor.execute('DELETE FROM contatos WHERE id = %s', (contato_id,))
-        conn.commit()
-        print("Contato excluido com sucesso.")
-    except mysql.connector.Error as erro:
-        conn.rollback()
-        print("Contato não existente")
+    conn.commit()
     conn.close()
-
 
 # Função principal do menu
 def menu():
@@ -135,8 +129,8 @@ def menu():
         print("2. Listar Contatos")
         print("3. Adicionar Conexão")
         print("4. Listar Conexões de um Contato")
-        print("5. Excluir Contato")
-        print("6. Excluir Conexão")
+        print("5. Excluir contato")
+        print("6. Excluir Conexão" )
         print("0. Sair")
 
         escolha = input("Escolha uma opção: ")
@@ -161,17 +155,17 @@ def menu():
             for conexao in conexoes:
                 print(conexao[0])
         elif escolha == "5":
-            contato_id = int(input("Digite o Id do contato a ser excluido: "))
-            excluir_contato(contato_id)
+            id = input("Informe o ID do contato a ser excluído: ")
+            excluir_contato(id)
         elif escolha == "6":
-            contato_id1 = input("Informe o ID do primeiro contato: ")
-            contato_id2 = input("Informe o ID do segundo contato: ")
-            excluir_conexao(contato_id1, contato_id2)
+            id1 = input("Informe o ID do primeiro contato: ")
+            id2 = input("Informe o ID do segundo contato: ")
+            excluir_conexao(id1, id2)
         elif escolha == "0":
             break
         else:
             print("Opção inválida. Tente novamente.")
 
 if __name__ == "__main__":
-    criar_banco()  # Certifique-se de que as tabelas estão criadas
+    criar_banco()
     menu()

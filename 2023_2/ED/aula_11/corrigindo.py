@@ -1,12 +1,52 @@
 import mysql.connector
+import pymysql
 
 db_config = {
-    "host": "db4free.net",
-    "user": "natanhmc",
-    "password": "1q2w3e4r5t",
-    "database": "linkedin123",
-    "port":3306
-}    
+    'user':'natanhmc',
+    'password':'1q2w3e4r5t',
+    'host':'db4free.net',
+    'database':'linkedin123',
+    'port':3306
+}
+
+
+
+def carregar_grafo_do_banco():
+    # Conecte-se ao banco de dados
+    conn = pymysql.connect(**db_config)
+
+    # Crie um cursor
+    cursor = conn.cursor()
+
+    # Selecione todos os contatos
+    cursor.execute("SELECT id, nome, perfil_linkedin FROM contatos")
+
+    # Crie um dicionário para armazenar o grafo
+    grafo = {}
+
+    # Itere sobre os contatos
+    for contato in cursor:
+        # Adicione o contato ao dicionário
+        grafo[contato[0]] = []
+
+        # Selecione todas as conexões do contato
+        cursor.execute("SELECT contato1_id, contato2_id FROM conexoes")
+
+        # Itere sobre as conexões
+        for conexao in cursor:
+            # Adicione a conexão ao dicionário
+            grafo[contato[0]].append(conexao[1] if conexao[0] == contato[0] else conexao[0])
+
+    # Feche o cursor e a conexão com o banco de dados
+    cursor.close()
+    conn.close()
+
+    return grafo
+
+grafo = carregar_grafo_do_banco()
+
+print(grafo)
+
 
 # Função para criar o banco de dados
 def criar_banco():
@@ -41,12 +81,14 @@ def adicionar_contato(nome, perfil_linkedin):
     cursor = conn.cursor()
 
     try:
-        cursor.execute('INSERT INTO contatos (nome, perfil_linkedin) VALUES (%s, %s)', (nome, perfil_linkedin))
-        conn.commit()
-        print("Contato adicionado com sucesso.")
+        cursor.execute('SELECT * FROM contatos where perfil_linkedin = %s',(perfil_linkedin,))
+        if cursor.fetchone() is None:
+            cursor.execute('INSERT INTO contatos (nome, perfil_linkedin) VALUES (%s, %s)', (nome, perfil_linkedin))
+            conn.commit()
+        else:
+            print("Contato ja cadastrado.")
     except mysql.connector.Error as erro:
-        conn.rollback()
-        print("Perfil já existente. Digite novamente")
+        print(f"Erro ao adicionar contato{erro}")
     conn.close()
 
 # Função para listar contatos
@@ -81,7 +123,7 @@ def adicionar_conexao(contato1_id, contato2_id):
         
     except mysql.connector.Error as erro:
         conn.rollback()
-        print(f"Ocorreu um erro{erro} de concorrência. Tente novamente.")
+        print(f"Ocorreu um erro{erro}. Tente novamente.")
         
     conn.close()
 
@@ -108,7 +150,7 @@ def listar_conexoes(contato_id):
 def excluir_conexao(contato_id1,contato_id2):
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
-    cursor.execute('DELETE FROM conexoes WHERE contato1_id = %s AND contato2_id = %s OR contato1_id = %s AND contato2_id = %s', (contato_id1, contato_id2, contato_id2,contato_id1))
+    cursor.execute('DELETE FROM conexoes WHERE (contato1_id = %s AND contato2_id = %s) OR (contato1_id = %s AND contato2_id = %s)', (contato_id1, contato_id2, contato_id2, contato_id1))
 
     conn.commit()
     conn.close()
@@ -118,13 +160,10 @@ def excluir_contato(contato_id):
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
 
-    try:
-        cursor.execute('DELETE FROM contatos WHERE id = %s', (contato_id,))
-        conn.commit()
-        print("Contato excluido com sucesso.")
-    except mysql.connector.Error as erro:
-        conn.rollback()
-        print("Contato não existente")
+    cursor.execute('DELETE FROM contatos WHERE contato1_id = %s OR contato2_id = %s', (contato_id,contato_id))
+    cursor.execute('DELETE FROM contatos WHERE contato_id = %s', (contato_id,))
+    
+    conn.commit()
     conn.close()
 
 
@@ -161,7 +200,7 @@ def menu():
             for conexao in conexoes:
                 print(conexao[0])
         elif escolha == "5":
-            contato_id = int(input("Digite o Id do contato a ser excluido: "))
+            contato_id = input("Digite o Id do contato a ser excluido: ")
             excluir_contato(contato_id)
         elif escolha == "6":
             contato_id1 = input("Informe o ID do primeiro contato: ")
