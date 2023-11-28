@@ -189,13 +189,16 @@ def adicionar_conexoes_ao_grafo(graph, conexoes):
 
     return graph
 
-def encontrar_caminho_mais_curto(contato1_id=int, contato2_id=int):
+def encontrar_caminho_mais_curto(contato1_id, contato2_id):
+    conexoes_contato1 = listar_conexoes(contato1_id)
+    conexoes_contato2 = listar_conexoes(contato2_id)
+
     # Obtém as conexões do banco de dados
-    conexoes = listar_conexoes(contato1_id,) + listar_conexoes(contato2_id,)
+    # conexoes = listar_conexoes(contato1_id,) + listar_conexoes(contato2_id,)
 
     # Construir o grafo a partir das conexões no banco de dados
-    graph = construir_grafo(conexoes)
-    graph = adicionar_conexoes_ao_grafo(graph, conexoes)
+    graph = construir_grafo(conexoes_contato1 + conexoes_contato2)
+    graph = adicionar_conexoes_ao_grafo(graph, conexoes_contato1 + conexoes_contato2)
 
     # Exibir o grafo antes de executar o algoritmo de Dijkstra
     print("Grafo:")
@@ -204,10 +207,10 @@ def encontrar_caminho_mais_curto(contato1_id=int, contato2_id=int):
 
     # Executar o algoritmo de Dijkstra
     distancias = dijkstra(graph, int(contato1_id))  # Certifique-se de converter para inteiro
-    contato2_id = int(contato2_id)  # Certifique-se de converter para inteiro
+    # contato2_id = int(contato2_id)  # Certifique-se de converter para inteiro
 
     # Mostrar a distância mínima entre os dois contatos
-    distancia_minima = distancias[contato2_id]
+    distancia_minima = distancias[int(contato2_id)]
     print(f"A distância mínima entre os contatos {contato1_id} e {contato2_id} é: {distancia_minima}")
 
 
