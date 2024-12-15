@@ -1,0 +1,88 @@
+CRITICAL - 2022-11-09 17:35:27 --> Invalid file: templates\footer.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates\\footer.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('templates\\footer', [], true)
+ 3 APPPATH/Controllers/Site.php(17): view('templates\\footer')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 17:58:28 --> Invalid file: templates\footer.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates\\footer.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('templates\\footer', [], true)
+ 3 APPPATH/Controllers/Site.php(17): view('templates\\footer')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 18:30:24 --> Invalid file: site/index.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('site/index.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('site/index', [], true)
+ 3 APPPATH/Controllers/Site.php(16): view('site/index')
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->view('index')
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 18:31:03 --> Invalid file: site/index.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('site/index.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('site/index', [], true)
+ 3 APPPATH/Controllers/Site.php(16): view('site/index')
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->view('index')
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 18:31:12 --> Invalid file: templates\footer.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates\\footer.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('templates\\footer', [], true)
+ 3 APPPATH/Controllers/Site.php(17): view('templates\\footer')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 18:34:27 --> Invalid file: templates\footer.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates\\footer.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('templates\\footer', [], true)
+ 3 APPPATH/Controllers/Site.php(17): view('templates\\footer')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 18:40:13 --> Invalid file: templates\footer.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates\\footer.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('templates\\footer', [], true)
+ 3 APPPATH/Controllers/Site.php(17): view('templates\\footer')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 18:40:17 --> Invalid file: templates\footer.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates\\footer.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('templates\\footer', [], true)
+ 3 APPPATH/Controllers/Site.php(17): view('templates\\footer')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-09 18:40:23 --> Invalid file: templates\footer.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates\\footer.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('templates\\footer', [], true)
+ 3 APPPATH/Controllers/Site.php(17): view('templates\\footer')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

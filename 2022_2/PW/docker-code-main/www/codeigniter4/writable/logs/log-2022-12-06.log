@@ -1,0 +1,12 @@
+CRITICAL - 2022-12-06 19:15:05 --> Call to a member function findAll() on null
+in APPPATH/Controllers/Admin/Client.php on line 23.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->listClients()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-06 19:37:40 --> Call to a member function findAll() on null
+in APPPATH/Controllers/Admin/Client.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->listClients()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

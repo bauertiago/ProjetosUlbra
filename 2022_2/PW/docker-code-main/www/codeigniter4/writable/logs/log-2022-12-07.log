@@ -1,0 +1,141 @@
+CRITICAL - 2022-12-07 17:04:10 --> Undefined property: App\Controllers\Admin\Product::$productModel
+in APPPATH/Controllers/Admin/Product.php on line 43.
+ 1 APPPATH/Controllers/Admin/Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin\\Product::$productModel', 'APPPATH/Controllers/Admin/Product.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('11')
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:05:04 --> Undefined array key "idProducts"
+in APPPATH/Views/admin/product/updateProduct.php on line 2.
+ 1 APPPATH/Views/admin/product/updateProduct.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProducts"', 'APPPATH/Views/admin/product/updateProduct.php', 2)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/updateProduct.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/updateProduct', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(46): view('admin/product/updateProduct', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('11')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:12:27 --> Undefined variable $arrayProducts
+in APPPATH/Views/admin/product/updateProduct.php on line 2.
+ 1 APPPATH/Views/admin/product/updateProduct.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arrayProducts', 'APPPATH/Views/admin/product/updateProduct.php', 2)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/updateProduct.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/updateProduct', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(46): view('admin/product/updateProduct', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('11')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:15:59 --> Undefined variable $product
+in APPPATH/Views/admin/product/listProducts.php on line 32.
+ 1 APPPATH/Views/admin/product/listProducts.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'APPPATH/Views/admin/product/listProducts.php', 32)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/listProducts.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/listProducts', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(20): view('admin/product/listProducts', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->listProducts()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:16:18 --> Undefined variable $product
+in APPPATH/Views/admin/product/listProducts.php on line 32.
+ 1 APPPATH/Views/admin/product/listProducts.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'APPPATH/Views/admin/product/listProducts.php', 32)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/listProducts.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/listProducts', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(20): view('admin/product/listProducts', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->listProducts()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:20:44 --> Undefined variable $arrayProducts
+in APPPATH/Views/admin/product/updateProduct.php on line 2.
+ 1 APPPATH/Views/admin/product/updateProduct.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arrayProducts', 'APPPATH/Views/admin/product/updateProduct.php', 2)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/updateProduct.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/updateProduct', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(46): view('admin/product/updateProduct', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('11')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:25:07 --> Undefined array key "idProducts"
+in APPPATH/Views/admin/product/updateProduct.php on line 2.
+ 1 APPPATH/Views/admin/product/updateProduct.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProducts"', 'APPPATH/Views/admin/product/updateProduct.php', 2)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/updateProduct.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/updateProduct', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(46): view('admin/product/updateProduct', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('11')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:26:29 --> Undefined array key "idProducts"
+in APPPATH/Views/admin/product/updateProduct.php on line 2.
+ 1 APPPATH/Views/admin/product/updateProduct.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProducts"', 'APPPATH/Views/admin/product/updateProduct.php', 2)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/updateProduct.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/updateProduct', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(46): view('admin/product/updateProduct', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('11')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:39:01 --> Undefined array key "idProducts"
+in APPPATH/Views/admin/product/updateProduct.php on line 2.
+ 1 APPPATH/Views/admin/product/updateProduct.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProducts"', 'APPPATH/Views/admin/product/updateProduct.php', 2)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/updateProduct.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/updateProduct', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(46): view('admin/product/updateProduct', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('10')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-07 17:40:00 --> mysqli_sql_exception: Unknown column 'products.idProducts' in 'where clause' in /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /var/www/html/codeigniter4/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /var/www/html/codeigniter4/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /var/www/html/codeigniter4/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /var/www/html/codeigniter4/system/Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/codeigniter4/system/BaseModel.php(524): CodeIgniter\Model->doFind(true, '10')
+#6 /var/www/html/codeigniter4/app/Controllers/Admin/Product.php(43): CodeIgniter\BaseModel->find('10')
+#7 /var/www/html/codeigniter4/system/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('10')
+#8 /var/www/html/codeigniter4/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#9 /var/www/html/codeigniter4/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /var/www/html/codeigniter4/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-07 17:40:00 --> Unknown column 'products.idProducts' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *
+FROM `products`
+WHERE `products`.`idProducts` = \'10\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `products`
+WHERE `products`.`idProducts` = \'10\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `products`
+WHERE `products`.`idProducts` = \'10\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `products`.`idProducts` = :products.idProducts:', [...], false)
+ 5 SYSTEMPATH/Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(524): CodeIgniter\Model->doFind(true, '10')
+ 7 APPPATH/Controllers/Admin/Product.php(43): CodeIgniter\BaseModel->find('10')
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('10')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 17:42:11 --> Undefined array key "idProducts"
+in APPPATH/Views/admin/product/updateProduct.php on line 2.
+ 1 APPPATH/Views/admin/product/updateProduct.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProducts"', 'APPPATH/Views/admin/product/updateProduct.php', 2)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/product/updateProduct.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/product/updateProduct', [], true)
+ 5 APPPATH/Controllers/Admin/Product.php(46): view('admin/product/updateProduct', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Product->updateProduct('10')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
