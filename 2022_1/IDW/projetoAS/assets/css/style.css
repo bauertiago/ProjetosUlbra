@@ -1,10 +1,9 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
-
 }
 
 section{
-background-color:rgb(212, 210, 207);
+background-color:rgb(218, 217, 215);
 color: rgb(30, 30, 30);
 }
 
@@ -12,6 +11,18 @@ color: rgb(30, 30, 30);
     padding-left: 70px;
     padding-right: 70px;
     padding-top: 16px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(105, 105, 105) !important; 
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color:rgb(75, 75, 75) !important; 
 }
 
 .form-control{
@@ -45,7 +56,7 @@ color: rgb(30, 30, 30);
 
 a{
     text-decoration: none;
-    color: rgb(30, 30, 30);
+    color: rgb(243, 219, 219);
 }
 
 .aFooter{
