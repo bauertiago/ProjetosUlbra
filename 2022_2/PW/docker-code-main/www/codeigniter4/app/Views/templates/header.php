@@ -41,9 +41,7 @@
                         </li>
                         
                         <h2>Clientes</h2>
-                        <li class="nav-item">
-                            <a class="nav-link-outline" href="<?=base_url('insertClient')?>">Cadastro</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link-outline" href="<?=base_url('listClients')?>">listar Clientes</a>
                         </li>
