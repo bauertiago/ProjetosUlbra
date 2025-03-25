@@ -16,11 +16,12 @@ import lombok.NoArgsConstructor;
 public class Clinic {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Pattern(regexp = "\\(\\d{2}\\)\\d{5}-\\d{4}", message = "Formato inválido! Use (xx)xxxxx-xxxx")
+
 
     private long id;
     private String name;
     private String address;
+    @Pattern(regexp = "\\(\\d{2}\\)\\d{5}-\\d{4}", message = "Formato inválido! Use (xx)xxxxx-xxxx")
     private String phone;
 
     public Clinic(String name, String address, String phone){

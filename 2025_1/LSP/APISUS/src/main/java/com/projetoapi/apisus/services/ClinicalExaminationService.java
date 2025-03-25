@@ -2,7 +2,7 @@ package com.projetoapi.apisus.services;
 
 import com.projetoapi.apisus.dtos.ClinicalExaminationResponseDTO;
 import com.projetoapi.apisus.entities.ClinicalExamination;
-import com.projetoapi.apisus.exceptions.NotFoundClinicalExaminationsExeptions;
+import com.projetoapi.apisus.exceptions.NotFoundClinicalExaminationsExceptions;
 import com.projetoapi.apisus.repositories.ClinicalExaminationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +26,7 @@ public class ClinicalExaminationService {
 
         List<ClinicalExamination> clinicalExaminations = this.clinicalExaminationRepository.findAll();
         if (clinicalExaminations.isEmpty()){
-            throw new NotFoundClinicalExaminationsExeptions();
+            throw new NotFoundClinicalExaminationsExceptions();
         }
         for (ClinicalExamination clinicalExamination : clinicalExaminations){
             clinicalExaminationDTO.add(new ClinicalExaminationResponseDTO(clinicalExamination.getName(),clinicalExamination.getDuracaoMedia(),clinicalExamination.getStatus()));
@@ -49,7 +49,7 @@ public class ClinicalExaminationService {
 
             return clinicalExaminationRepository.save(newClinicalExamination);
         }
-        throw new NotFoundClinicalExaminationsExeptions();
+        throw new NotFoundClinicalExaminationsExceptions();
     }
 
     public ResponseEntity<String> deletClinicalExamination(long id){

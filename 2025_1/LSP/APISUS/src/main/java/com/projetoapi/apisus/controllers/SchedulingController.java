@@ -13,6 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/scheduling")
+@CrossOrigin(origins = "http://localhost:5173")
 public class SchedulingController {
     private SchedulingService schedulingService;
 
@@ -46,8 +47,8 @@ public class SchedulingController {
     }
 
     @DeleteMapping("/all")
-    public String deleteAll(){
+    public ResponseEntity<String> deleteAll(){
         schedulingService.deleteAll();
-        return "Agendamento deletado com sucesso";
+        return ResponseEntity.ok("Todos os agendamentos foram deletados com sucesso");
     }
 }

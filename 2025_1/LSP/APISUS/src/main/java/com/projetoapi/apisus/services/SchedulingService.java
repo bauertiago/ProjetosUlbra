@@ -2,7 +2,7 @@ package com.projetoapi.apisus.services;
 
 import com.projetoapi.apisus.dtos.SchedulingResponseDTO;
 import com.projetoapi.apisus.entities.Scheduling;
-import com.projetoapi.apisus.exceptions.NotFoundSchedulingExeptions;
+import com.projetoapi.apisus.exceptions.NotFoundSchedulingExceptions;
 import com.projetoapi.apisus.repositories.SchedulingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,16 +22,13 @@ public class SchedulingService {
     }
 
     public List<SchedulingResponseDTO> getAllScheduling(){
-        List<SchedulingResponseDTO> schedulingDTO = new ArrayList<>();
-
-        List<Scheduling> schedulings = this.schedulingRepository.findAll();
+        List<Scheduling> schedulings = schedulingRepository.findAll();
         if (schedulings.isEmpty()){
-            throw new NotFoundSchedulingExeptions();
+            throw new NotFoundSchedulingExceptions();
         }
-        for (Scheduling scheduling : schedulings){
-            schedulingDTO.add(new SchedulingResponseDTO(scheduling.getNamePatient(), scheduling.getCpfPatient(), scheduling.getClinicName(), scheduling.getClinicAddress(), scheduling.getDateTime(), scheduling.getPriorityOfService()));
-        }
-        return schedulingDTO;
+        return schedulings.stream()
+                .map(s -> new SchedulingResponseDTO(s.getNamePatient(), s.getCpfPatient(), s.getClinicName(), s.getClinicAddress(), s.getExamType(), s.getDateTime(), s.getPriorityOfService()))
+                .toList();
     }
 
     public SchedulingResponseDTO createScheduling(SchedulingResponseDTO schedulingDTO){
@@ -48,12 +45,13 @@ public class SchedulingService {
             newScheduling.setCpfPatient(updateScheduling.getCpfPatient());
             newScheduling.setClinicName(updateScheduling.getClinicName());
             newScheduling.setClinicAddress(updateScheduling.getClinicAddress());
+            newScheduling.setExamType(updateScheduling.getExamType());
             newScheduling.setDateTime(updateScheduling.getDateTime());
             newScheduling.setPriorityOfService(updateScheduling.getPriorityOfService());
 
             return schedulingRepository.save(newScheduling);
         }
-        throw new NotFoundSchedulingExeptions();
+        throw new NotFoundSchedulingExceptions();
     }
 
     public ResponseEntity<String> deleteScheduling(long id){

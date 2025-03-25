@@ -12,17 +12,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class SchedulingResponseDTO {
     private String namePatient;
-    private int cpfPatient;
+    private String cpfPatient;
     private String clinicName;
     private String clinicAddress;
+    private String examType;
     private LocalDateTime dateTime;
     private String priorityOfService;
 
     public Scheduling convertDTOToScheduling(){
-        return new Scheduling(this.getNamePatient(), this.getCpfPatient(), this.getClinicName(), this.getClinicAddress(),this.getDateTime(), this.getPriorityOfService());
+        return new Scheduling(this.getNamePatient(), this.getCpfPatient(), this.getClinicName(), this.getClinicAddress(),this.getExamType(),this.getDateTime(), this.getPriorityOfService());
     }
 
     public SchedulingResponseDTO convertSchedulingToDTO(Scheduling scheduling){
-        return new SchedulingResponseDTO(scheduling.getNamePatient(), scheduling.getCpfPatient(), scheduling.getClinicName(), scheduling.getClinicAddress(), scheduling.getDateTime(), scheduling.getPriorityOfService());
+        return new SchedulingResponseDTO(scheduling.getNamePatient(), scheduling.getCpfPatient(), scheduling.getClinicName(), scheduling.getClinicAddress(), scheduling.getExamType(), scheduling.getDateTime(), scheduling.getPriorityOfService());
     }
 }

@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PatientResponseDTO {
     private String name;
-    private int cpf;
+    private String cpf;
     private LocalDate dataDeNascimento;
     private String phone;
 
